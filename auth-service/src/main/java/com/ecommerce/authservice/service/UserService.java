@@ -13,10 +13,12 @@ public interface UserService {
 
     Optional<User> findByUsername(String username);
 
-    Optional<User> finByEmail(String email);
+    Optional<User> findByEmail(String email);
 
-    boolean existisByUsername(String username);
+    boolean existsByUsername(String name);
 
     boolean existsByEmail(String email);
 
 }
+
+//PASO 5.12 — Implementar RoleServiceImpl

@@ -12,16 +12,16 @@ import com.ecommerce.authservice.service.UserService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
-@Service 
-@RequiredArgsConstructor 
-@Transactional 
-public class UserServiceImpl implements  UserService{
+@Service
+@Transactional
+@RequiredArgsConstructor
+public class UserServiceImpl implements UserService{
 
     private final UserRepository userRepository;
 
     @Override
     public User save(User user) {
-       return userRepository.save(user);
+        return userRepository.save(user);
     }
 
     @Override
@@ -31,22 +31,22 @@ public class UserServiceImpl implements  UserService{
 
     @Override
     public Optional<User> findByUsername(String username) {
-       return userRepository.findByUsername(username);
+        return userRepository.findByUsername(username);
     }
 
     @Override
-    public Optional<User> finByEmail(String email) {
-        return userRepository.findByEmail(email);
+    public Optional<User> findByEmail(String email) {
+       return userRepository.findByEmail(email);
     }
 
     @Override
-    public boolean existisByUsername(String username) {
-        return userRepository.existsByUsername(username);
+    public boolean existsByUsername(String name) {
+       return userRepository.existsByUsername(name);
     }
 
     @Override
     public boolean existsByEmail(String email) {
-       return userRepository.existsByEmail(email);
+        return userRepository.existsByEmail(email);
     }
 
 }

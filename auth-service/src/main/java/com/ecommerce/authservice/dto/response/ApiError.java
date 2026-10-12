@@ -1,12 +1,13 @@
 package com.ecommerce.authservice.dto.response;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import lombok.Builder;
 import lombok.Getter;
 
-@Getter 
-@Builder 
+@Getter
+@Builder
 public class ApiError {
 
     private LocalDateTime timestamp;
@@ -18,5 +19,7 @@ public class ApiError {
     private String message;
 
     private String path;
+
+    private List<FieldValidationError> fieldErrors;
 
 }
